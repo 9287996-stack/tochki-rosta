@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Точки роста прибыли — обучение Константина</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Segoe UI', 'Arial', sans-serif;
+            color: #1a1a1a;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        img { max-width: 100%; height: auto; display: block; }
+
+        .hero {
+            background: #0d3b3b;
+            color: #fff;
+            padding: 50px 20px 60px;
+            text-align: center;
+        }
+        .hero .photo-circle {
+            width: 120px; height: 120px;
+            object-fit: cover; border-radius: 50%;
+            border: 4px solid #fff;
+            margin: 0 auto 25px;
+        }
+        .hero h1 {
+            font-size: 28px; font-weight: 700;
+            margin-bottom: 12px; line-height: 1.3;
+        }
+        .hero .sub {
+            font-size: 17px; opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        .hero .tag {
+            display: inline-block;
+            background: rgba(255,255,255,0.15);
+            padding: 8px 22px; border-radius: 30px;
+            font-size: 15px; margin: 6px;
+        }
+        .hero .btn-row { margin-top: 28px; }
+        .btn {
+            display: inline-block;
+            padding: 14px 32px; border-radius: 40px;
+            text-decoration: none; font-weight: 700;
+            font-size: 16px; margin: 6px;
+            border: none; cursor: pointer;
+            transition: 0.2s;
+        }
+        .btn-white {
+            background: #fff; color: #0d3b3b;
+        }
+        .btn-white:hover { background: #e6f0f0; }
+        .btn-outline {
+            background: transparent; color: #fff;
+            border: 2px solid #fff;
+        }
+        .btn-outline:hover { background: rgba(255,255,255,0.1); }
+
+        section {
+            padding: 50px 20px; max-width: 860px;
+            margin: 0 auto;
+        }
+        h2 {
+            font-size: 22px; color: #0d3b3b;
+            margin-bottom: 20px; text-align: center;
+        }
+        .for-whom {
+            display: flex; flex-wrap: wrap;
+            gap: 20px; justify-content: center;
+            text-align: center;
+        }
+        .for-whom .card {
+            flex: 1 1 220px; max-width: 250px;
+            padding: 22px 16px; border-radius: 16px;
+            background: #f5fafa; font-weight: 600;
+        }
+
+        .week-list {
+            list-style: none; padding: 0;
+            margin-top: 10px;
+        }
+        .week-list li {
+            background: #f5fafa; border-left: 5px solid #0d3b3b;
+            padding: 14px 18px; margin-bottom: 12px;
+            border-radius: 6px;
+            font-weight: 500;
+        }
+        .week-list li span {
+            display: block; font-size: 14px; color: #555;
+            font-weight: 400; margin-top: 4px;
+        }
+
+        .tariffs {
+            display: flex; flex-wrap: wrap;
+            gap: 18px; justify-content: center;
+            margin-top: 20px;
+        }
+        .tariff-card {
+            flex: 1 1 180px; max-width: 220px;
+            background: #fff; border: 1px solid #ddd;
+            border-radius: 12px; padding: 20px 14px;
+            text-align: center;
+            transition: 0.2s;
+        }
+        .tariff-card:hover { border-color: #0d3b3b; box-shadow: 0 6px 18px rgba(0,0,0,0.07); }
+        .tariff-card.vip { border-color: #0d3b3b; background: #fafdfd; }
+        .tariff-card .price {
+            font-size: 26px; font-weight: 700;
+            color: #0d3b3b; margin: 10px 0 4px;
+        }
+        .tariff-card .desc {
+            font-size: 14px; color: #666;
+            line-height: 1.4;
+        }
+
+        .about-block {
+            display: flex; flex-wrap: wrap;
+            gap: 28px; align-items: center;
+            justify-content: center;
+        }
+        .about-block .photo-rect {
+            width: 200px; border-radius: 12px;
+            object-fit: cover;
+        }
+        .about-text {
+            flex: 1; min-width: 240px;
+        }
+        .numbers-grid {
+            display: flex; flex-wrap: wrap;
+            gap: 14px; margin: 14px 0;
+        }
+        .num-card {
+            background: #edf5f5; border-left: 4px solid #0d3b3b;
+            padding: 10px 14px; font-size: 14px;
+            flex: 1 1 120px;
+        }
+        .num-card .big {
+            font-size: 20px; font-weight: 700;
+            color: #0d3b3b;
+        }
+
+        .cases ol {
+            padding-left: 22px;
+        }
+        .cases ol li {
+            margin-bottom: 10px; font-size: 15px;
+        }
+        .cases ol li strong { color: #0d3b3b; }
+
+        footer {
+            background: #0d3b3b; color: #fff;
+            text-align: center; padding: 40px 20px;
+        }
+        footer .btn-white { margin-top: 18px; }
+
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 23px; }
+            section { padding: 32px 16px; }
+            h2 { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- === HERO === -->
+<header class="hero">
+    <img class="photo-circle" src="photo2.jpg" alt="Константин">
+    <h1>«Точки роста прибыли»</h1>
+    <p class="sub">Первый поток авторского обучения<br>для финансистов, руководителей и их компаний</p>
+    <span class="tag">Старт: 15.05.2026</span>
+    <span class="tag">Онлайн</span>
+    <span class="tag">1 месяц</span>
+    <div class="btn-row">
+        <a class="btn btn-white" href="https://t.me/Konstantin_finansist" target="_blank">Написать в Telegram</a>
+        <a class="btn btn-outline" href="https://max.ru/u/f9LHodD0cOJ-kcw82Nx-7TP04bGN5DIMTp5ciguyJYZIDtn5ia9V79prc-8" target="_blank">Написать в MAX</a>
+    </div>
+</header>
+
+<!-- === ДЛЯ КОГО === -->
+<section>
+    <h2>Для кого это обучение</h2>
+    <div class="for-whom">
+        <div class="card">🏢 Собственники бизнеса</div>
+        <div class="card">💰 Финансисты и экономисты</div>
+        <div class="card">👥 Руководители отделов</div>
+    </div>
+    <p style="text-align:center; margin-top: 18px; color: #555;">Вы получите инструменты для поиска скрытой прибыли — в своём бизнесе или в бизнесе работодателя.</p>
+</section>
+
+<!-- === ПРОГРАММА === -->
+<section style="background: #fafdfd;">
+    <h2>Программа курса</h2>
+    <ul class="week-list">
+        <li><strong>Неделя 0 (вводная)</strong><span>Знакомство, настройка, оргвопросы. Формирование целей участников.</span></li>
+        <li><strong>Неделя 1</strong><span>Финансовая аналитика и юнит-экономика</span></li>
+        <li><strong>Неделя 2</strong><span>Ценообразование и маржинальность</span></li>
+        <li><strong>Неделя 3</strong><span>Закупки, логистика, производство</span></li>
+        <li><strong>Неделя 4</strong><span>Оборотный капитал и финансовый цикл</span></li>
+    </ul>
+    <p style="text-align:center; font-size:14px; color:#888;">1 раз в неделю, живые онлайн-встречи + домашки + куратор</p>
+</section>
+
+<!-- === ФОРМАТ === -->
+<section>
+    <h2>Формат участия</h2>
+    <div style="display:flex; flex-wrap:wrap; gap:18px; justify-content:center;">
+        <div style="flex:1 1 200px;max-width:240px;background:#f5fafa;padding:18px;border-radius:12px;">
+            📅 1 месяц<br>4+1 встреч онлайн
+        </div>
+        <div style="flex:1 1 200px;max-width:240px;background:#f5fafa;padding:18px;border-radius:12px;">
+            👥 7–9 человек<br>камерная группа
+        </div>
+        <div style="flex:1 1 200px;max-width:240px;background:#f5fafa;padding:18px;border-radius:12px;">
+            🎯 Индивидуальный<br>разбор тет-а-тет
+        </div>
+        <div style="flex:1 1 200px;max-width:240px;background:#f5fafa;padding:18px;border-radius:12px;">
+            ✅ Домашки<br>и куратор
+        </div>
+    </div>
+</section>
+
+<!-- === ТАРИФЫ === -->
+<section style="background:#fafdfd;">
+    <h2>Стоимость — инвестиция, которая окупается</h2>
+    <p style="text-align:center; color:#555; margin-bottom: 8px;">Одна найденная точка роста окупает обучение в первый месяц</p>
+    <div class="tariffs">
+        <div class="tariff-card">
+            <div>🧑‍💼 Базовый</div>
+            <div class="price">50 000 ₽</div>
+            <div class="desc">за одного участника</div>
+        </div>
+        <div class="tariff-card">
+            <div>👥 Парный</div>
+            <div class="price">45 000 ₽</div>
+            <div class="desc">за каждого при оплате за двоих</div>
+        </div>
+        <div class="tariff-card">
+            <div>👥👥 Командный</div>
+            <div class="price">40 000 ₽</div>
+            <div class="desc">за каждого при оплате за троих и более</div>
+        </div>
+        <div class="tariff-card vip">
+            <div>🌟 VIP</div>
+            <div class="price">75 000 ₽</div>
+            <div class="desc">+ личная стратегическая сессия развития</div>
+        </div>
+    </div>
+</section>
+
+<!-- === ОБ АВТОРЕ === -->
+<section>
+    <h2>Об авторе</h2>
+    <div class="about-block">
+        <img class="photo-rect" src="photo1.jpg" alt="Константин">
+        <div class="about-text">
+            <p><strong>Константин</strong> — 20+ лет в финансах и корпоративном управлении, 15+ лет в консалтинге.</p>
+            <p>Более 700 бизнесов, среди клиентов: РЖД, 585, Большая Медведица, РоссПак и другие.</p>
+            <div class="numbers-grid">
+                <div class="num-card"><span class="big">300+</span><br>клиентов</div>
+                <div class="num-card"><span class="big">500+ млн ₽</span><br>доп. прибыли</div>
+                <div class="num-card"><span class="big">>1,5 млрд ₽</span><br>привлечено</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- === КЕЙСЫ === -->
+<section style="background:#fafdfd;">
+    <h2>Кейсы из практики</h2>
+    <div class="cases">
+        <ol>
+            <li><strong>Сбор вторсырья.</strong> Прибыль ×2 за 5 месяцев без роста объёмов.</li>
+            <li><strong>Производство металлоизделий.</strong> С 20 до 30 млн руб./год на том же обороте.</li>
+            <li><strong>Услуги обучения.</strong> Смежное направление принесло в 3 раза больше денег.</li>
+            <li><strong>Торговая компания.</strong> Запустили ИТ-продукт, который даёт столько же прибыли, сколько основной бизнес.</li>
+            <li><strong>Тендеры.</strong> Объём продаж ×7, прибыль ×3 за 3 месяца.</li>
+        </ol>
+    </div>
+</section>
+
+<!-- === FOOTER === -->
+<footer>
+    <h2 style="color:#fff;">Начните находить скрытую прибыль</h2>
+    <p style="opacity:0.85; margin-bottom: 8px;">Первый поток — максимальная включённость автора</p>
+    <a class="btn btn-white" href="https://t.me/Konstantin_finansist" target="_blank">Написать в Telegram</a>
+    <br>
+    <a class="btn btn-outline" href="https://max.ru/u/f9LHodD0cOJ-kcw82Nx-7TP04bGN5DIMTp5ciguyJYZIDtn5ia9V79prc-8" target="_blank" style="margin-top: 12px;">Написать в MAX</a>
+    <p style="margin-top:22px; font-size:14px; opacity:0.7;">📞 +7 913 928 79 96</p>
+</footer>
+
+</body>
+</html>
