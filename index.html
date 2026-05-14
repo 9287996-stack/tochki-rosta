@@ -3,171 +3,272 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Точки роста прибыли — обучение Константина</title>
+    <title>ФИНЗНАЕТ — Точки роста прибыли</title>
+
+    <!-- Montserrat -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; }
         body {
-            font-family: 'Segoe UI', 'Arial', sans-serif;
-            color: #1a1a1a;
+            font-family: 'Montserrat', 'Arial', sans-serif;
+            background: #0B1F1A;
+            color: #E0E0E0;
             line-height: 1.6;
             font-size: 16px;
         }
         img { max-width: 100%; height: auto; display: block; }
 
+        /* Hero */
         .hero {
-            background: #0d3b3b;
+            background: #0B1F1A;
+            position: relative;
             color: #fff;
-            padding: 50px 20px 60px;
+            padding: 60px 20px 70px;
             text-align: center;
+            overflow: hidden;
         }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: -60px; right: -60px;
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(76,175,80,0.25) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        .hero::after {
+            content: "";
+            position: absolute;
+            bottom: -40px; left: -40px;
+            width: 220px; height: 220px;
+            background: radial-gradient(circle, rgba(139,195,74,0.2) 0%, transparent 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        .qr-bg {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect x='20' y='20' width='60' height='60' rx='4' fill='none' stroke='%234CAF50' stroke-width='3'/%3E%3Crect x='30' y='30' width='40' height='40' rx='2' fill='%234CAF50' fill-opacity='0.3'/%3E%3Crect x='120' y='20' width='60' height='60' rx='4' fill='none' stroke='%234CAF50' stroke-width='3'/%3E%3Ccircle cx='150' cy='50' r='15' fill='%234CAF50' fill-opacity='0.3'/%3E%3Crect x='20' y='120' width='60' height='60' rx='4' fill='none' stroke='%238BC34A' stroke-width='3'/%3E%3Crect x='30' y='130' width='15' height='15' rx='2' fill='%238BC34A' fill-opacity='0.5'/%3E%3Crect x='55' y='130' width='15' height='15' rx='2' fill='%238BC34A' fill-opacity='0.5'/%3E%3Crect x='30' y='155' width='15' height='15' rx='2' fill='%238BC34A' fill-opacity='0.5'/%3E%3Crect x='120' y='120' width='60' height='60' rx='4' fill='none' stroke='%234CAF50' stroke-width='3'/%3E%3Crect x='130' y='130' width='40' height='15' rx='2' fill='%234CAF50' fill-opacity='0.4'/%3E%3Crect x='130' y='155' width='40' height='15' rx='2' fill='%234CAF50' fill-opacity='0.4'/%3E%3C/svg%3E");
+            background-size: 240px 240px;
+            opacity: 0.08;
+            z-index: 0;
+        }
+        .hero>* { position: relative; z-index: 1; }
         .hero .photo-circle {
-            width: 120px; height: 120px;
+            width: 130px; height: 130px;
             object-fit: cover; border-radius: 50%;
-            border: 4px solid #fff;
-            margin: 0 auto 25px;
+            border: 4px solid #4CAF50;
+            margin: 0 auto 28px;
+            box-shadow: 0 0 30px rgba(76,175,80,0.3);
+        }
+        .hero .brand {
+            font-size: 14px; font-weight: 700;
+            letter-spacing: 4px; text-transform: uppercase;
+            color: #4CAF50; margin-bottom: 8px;
         }
         .hero h1 {
-            font-size: 28px; font-weight: 700;
-            margin-bottom: 12px; line-height: 1.3;
+            font-size: 32px; font-weight: 800;
+            margin-bottom: 12px; line-height: 1.2;
+            letter-spacing: -0.5px;
         }
+        .hero h1 span { color: #8BC34A; }
         .hero .sub {
-            font-size: 17px; opacity: 0.9;
-            margin-bottom: 20px;
+            font-size: 17px; opacity: 0.85;
+            margin-bottom: 24px; font-weight: 500;
         }
         .hero .tag {
             display: inline-block;
-            background: rgba(255,255,255,0.15);
-            padding: 8px 22px; border-radius: 30px;
-            font-size: 15px; margin: 6px;
+            background: rgba(76,175,80,0.15);
+            border: 1px solid rgba(76,175,80,0.3);
+            padding: 10px 24px; border-radius: 40px;
+            font-size: 15px; margin: 6px; font-weight: 600;
         }
-        .hero .btn-row { margin-top: 28px; }
+        .hero .btn-row { margin-top: 32px; }
         .btn {
             display: inline-block;
-            padding: 14px 32px; border-radius: 40px;
+            padding: 16px 36px; border-radius: 40px;
             text-decoration: none; font-weight: 700;
             font-size: 16px; margin: 6px;
             border: none; cursor: pointer;
-            transition: 0.2s;
+            transition: 0.25s; letter-spacing: 0.3px;
         }
-        .btn-white {
-            background: #fff; color: #0d3b3b;
+        .btn-green {
+            background: #4CAF50; color: #fff;
+            box-shadow: 0 4px 20px rgba(76,175,80,0.35);
         }
-        .btn-white:hover { background: #e6f0f0; }
+        .btn-green:hover { background: #43A047; transform: translateY(-2px); box-shadow: 0 6px 28px rgba(76,175,80,0.45); }
         .btn-outline {
             background: transparent; color: #fff;
-            border: 2px solid #fff;
+            border: 2px solid rgba(255,255,255,0.35);
         }
-        .btn-outline:hover { background: rgba(255,255,255,0.1); }
+        .btn-outline:hover { border-color: #4CAF50; color: #4CAF50; }
 
+        /* Sections */
         section {
-            padding: 50px 20px; max-width: 860px;
+            padding: 60px 24px; max-width: 880px;
             margin: 0 auto;
         }
         h2 {
-            font-size: 22px; color: #0d3b3b;
-            margin-bottom: 20px; text-align: center;
+            font-size: 26px; font-weight: 700;
+            color: #fff; margin-bottom: 28px;
+            text-align: center; letter-spacing: -0.3px;
         }
+        h2 span { color: #8BC34A; }
+
+        /* For Whom */
         .for-whom {
             display: flex; flex-wrap: wrap;
             gap: 20px; justify-content: center;
             text-align: center;
         }
         .for-whom .card {
-            flex: 1 1 220px; max-width: 250px;
-            padding: 22px 16px; border-radius: 16px;
-            background: #f5fafa; font-weight: 600;
+            flex: 1 1 220px; max-width: 260px;
+            padding: 28px 20px; border-radius: 20px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            font-weight: 600; font-size: 15px;
+            transition: 0.25s;
         }
+        .for-whom .card:hover { border-color: rgba(76,175,80,0.4); background: rgba(76,175,80,0.05); }
+        .for-whom .card .icon { font-size: 32px; margin-bottom: 10px; }
 
+        /* Program */
         .week-list {
             list-style: none; padding: 0;
             margin-top: 10px;
         }
         .week-list li {
-            background: #f5fafa; border-left: 5px solid #0d3b3b;
-            padding: 14px 18px; margin-bottom: 12px;
-            border-radius: 6px;
+            background: rgba(255,255,255,0.03);
+            border-left: 4px solid #4CAF50;
+            padding: 18px 22px; margin-bottom: 14px;
+            border-radius: 8px;
             font-weight: 500;
+            transition: 0.2s;
         }
+        .week-list li:hover { background: rgba(76,175,80,0.06); }
         .week-list li strong {
-            display: block; font-size: 15px; color: #0d3b3b;
-            margin-bottom: 4px;
+            display: block; font-size: 16px; color: #8BC34A;
+            margin-bottom: 5px; font-weight: 700;
         }
         .week-list li span {
-            display: block; font-size: 14px; color: #444;
-            font-weight: 400; margin-bottom: 6px;
+            display: block; font-size: 14px; color: #ccc;
+            font-weight: 400; margin-bottom: 6px; line-height: 1.5;
         }
         .week-list li em {
-            display: block; font-size: 13px; color: #777;
+            display: block; font-size: 13px; color: #888;
             font-weight: 400; font-style: normal;
         }
 
+        /* Schedule */
+        .schedule-grid {
+            display: flex; flex-wrap: wrap;
+            gap: 16px; justify-content: center;
+            margin-top: 20px;
+        }
+        .schedule-card {
+            flex: 1 1 150px; max-width: 180px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px; padding: 18px 14px;
+            text-align: center;
+        }
+        .schedule-card .day {
+            font-size: 13px; color: #4CAF50;
+            font-weight: 700; text-transform: uppercase;
+            letter-spacing: 1px; margin-bottom: 6px;
+        }
+        .schedule-card .desc {
+            font-size: 13px; color: #ccc;
+            line-height: 1.5;
+        }
+
+        /* Tariffs */
         .tariffs {
             display: flex; flex-wrap: wrap;
             gap: 18px; justify-content: center;
             margin-top: 20px;
         }
         .tariff-card {
-            flex: 1 1 180px; max-width: 220px;
-            background: #fff; border: 1px solid #ddd;
-            border-radius: 12px; padding: 20px 14px;
-            text-align: center;
-            transition: 0.2s;
+            flex: 1 1 170px; max-width: 220px;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px; padding: 24px 16px;
+            text-align: center; transition: 0.25s;
         }
-        .tariff-card:hover { border-color: #0d3b3b; box-shadow: 0 6px 18px rgba(0,0,0,0.07); }
-        .tariff-card.vip { border-color: #0d3b3b; background: #fafdfd; }
+        .tariff-card:hover { border-color: rgba(76,175,80,0.5); background: rgba(76,175,80,0.06); }
+        .tariff-card.vip { border-color: #4CAF50; background: rgba(76,175,80,0.08); }
         .tariff-card .price {
-            font-size: 26px; font-weight: 700;
-            color: #0d3b3b; margin: 10px 0 4px;
+            font-size: 28px; font-weight: 800;
+            color: #8BC34A; margin: 10px 0 4px;
         }
         .tariff-card .desc {
-            font-size: 14px; color: #666;
-            line-height: 1.4;
+            font-size: 13px; color: #aaa;
+            line-height: 1.5;
         }
 
+        /* About */
         .about-block {
             display: flex; flex-wrap: wrap;
-            gap: 28px; align-items: center;
+            gap: 32px; align-items: center;
             justify-content: center;
         }
         .about-block .photo-rect {
-            width: 200px; border-radius: 12px;
+            width: 200px; border-radius: 20px;
             object-fit: cover;
+            border: 2px solid rgba(76,175,80,0.3);
         }
         .about-text {
             flex: 1; min-width: 240px;
         }
+        .about-text strong { color: #8BC34A; }
         .numbers-grid {
             display: flex; flex-wrap: wrap;
-            gap: 14px; margin: 14px 0;
+            gap: 14px; margin: 18px 0;
         }
         .num-card {
-            background: #edf5f5; border-left: 4px solid #0d3b3b;
-            padding: 10px 14px; font-size: 14px;
-            flex: 1 1 120px;
+            background: rgba(76,175,80,0.08);
+            border-left: 4px solid #4CAF50;
+            padding: 12px 16px; font-size: 14px;
+            flex: 1 1 120px; border-radius: 4px;
         }
         .num-card .big {
-            font-size: 20px; font-weight: 700;
-            color: #0d3b3b;
+            font-size: 22px; font-weight: 800;
+            color: #8BC34A;
         }
 
+        /* Cases */
         .cases ol {
             padding-left: 22px;
         }
         .cases ol li {
-            margin-bottom: 10px; font-size: 15px;
+            margin-bottom: 12px; font-size: 15px;
+            color: #ccc; line-height: 1.5;
         }
-        .cases ol li strong { color: #0d3b3b; }
+        .cases ol li strong { color: #8BC34A; }
 
+        /* Footer */
         footer {
-            background: #0d3b3b; color: #fff;
-            text-align: center; padding: 40px 20px;
+            background: #061612;
+            color: #fff; text-align: center;
+            padding: 50px 20px;
         }
-        footer .btn-white { margin-top: 18px; }
+        footer h2 { color: #fff; }
+        footer .btn-green { margin-top: 20px; }
 
+        .divider {
+            border: none; border-top: 1px solid rgba(255,255,255,0.06);
+            max-width: 880px; margin: 0 auto;
+        }
+
+        /* Mobile */
         @media (max-width: 600px) {
-            .hero h1 { font-size: 23px; }
-            section { padding: 32px 16px; }
-            h2 { font-size: 20px; }
+            .hero h1 { font-size: 24px; }
+            section { padding: 40px 18px; }
+            h2 { font-size: 22px; }
         }
     </style>
 </head>
@@ -175,32 +276,66 @@
 
 <!-- === HERO === -->
 <header class="hero">
+    <div class="qr-bg"></div>
+    <div class="brand">ФИНЗНАЕТ</div>
     <img class="photo-circle" src="photo2.jpg" alt="Константин">
-    <h1>«Точки роста прибыли»</h1>
+    <h1><span>Точки роста</span> прибыли</h1>
     <p class="sub">Первый поток авторского обучения<br>для финансистов, руководителей и их компаний</p>
-    <span class="tag">Старт: 15.05.2026</span>
+    <span class="tag">Старт: 26 мая</span>
+    <span class="tag">Финал: 30 июня</span>
+    <span class="tag">6 недель</span>
     <span class="tag">Онлайн</span>
-    <span class="tag">1 месяц</span>
     <div class="btn-row">
-        <a class="btn btn-white" href="https://t.me/Konstantin_finansist" target="_blank">Написать в Telegram</a>
+        <a class="btn btn-green" href="https://t.me/Konstantin_finansist" target="_blank">Написать в Telegram</a>
         <a class="btn btn-outline" href="https://max.ru/u/f9LHodD0cOJ-kcw82Nx-7TP04bGN5DIMTp5ciguyJYZIDtn5ia9V79prc-8" target="_blank">Написать в MAX</a>
     </div>
 </header>
 
 <!-- === ДЛЯ КОГО === -->
 <section>
-    <h2>Для кого это обучение</h2>
+    <h2>Для кого это <span>обучение</span></h2>
     <div class="for-whom">
-        <div class="card">🏢 Собственники бизнеса</div>
-        <div class="card">💰 Финансисты и экономисты</div>
-        <div class="card">👥 Руководители отделов</div>
+        <div class="card"><div class="icon">🏢</div>Собственники бизнеса</div>
+        <div class="card"><div class="icon">💰</div>Финансисты и экономисты</div>
+        <div class="card"><div class="icon">👥</div>Руководители отделов</div>
     </div>
-    <p style="text-align:center; margin-top: 18px; color: #555;">Вы получите инструменты для поиска скрытой прибыли — в своём бизнесе или в бизнесе работодателя.</p>
+    <p style="text-align:center; margin-top: 20px; color: #aaa;">Вы получите инструменты для поиска скрытой прибыли — в своём бизнесе или в бизнесе работодателя.</p>
 </section>
 
+<hr class="divider">
+
+<!-- === МЕХАНИКА === -->
+<section>
+    <h2>Как проходит <span>обучение</span></h2>
+    <div class="schedule-grid">
+        <div class="schedule-card">
+            <div class="day">Вт 19:30–22:00</div>
+            <div class="desc">Основное занятие<br>+ домашнее задание</div>
+        </div>
+        <div class="schedule-card">
+            <div class="day">Ср–Пт</div>
+            <div class="desc">Сбор информации<br>вопросы в чат<br>работа с трекерами</div>
+        </div>
+        <div class="schedule-card">
+            <div class="day">Сб–Вс</div>
+            <div class="desc">Индивидуальные<br>разборы с автором<br>+ комплексное<br>выполнение домашки</div>
+        </div>
+        <div class="schedule-card">
+            <div class="day">Пн</div>
+            <div class="desc">Вход в рабочую<br>неделю</div>
+        </div>
+        <div class="schedule-card">
+            <div class="day">30 июня</div>
+            <div class="desc">Финальное занятие<br>+ завершение курса</div>
+        </div>
+    </div>
+</section>
+
+<hr class="divider">
+
 <!-- === ПРОГРАММА === -->
-<section style="background: #fafdfd;">
-    <h2>Программа курса</h2>
+<section>
+    <h2>Программа <span>курса</span></h2>
     <ul class="week-list">
         <li>
             <strong>НЕДЕЛЯ 0 — Вводная</strong>
@@ -233,32 +368,35 @@
             <em>Результат: итоговый отчёт по точкам роста + дорожная карта.</em>
         </li>
     </ul>
-    <p style="text-align:center; font-size:14px; color:#888;">1 раз в неделю, живые онлайн-встречи + домашки + куратор</p>
 </section>
+
+<hr class="divider">
 
 <!-- === ФОРМАТ === -->
 <section>
-    <h2>Формат участия</h2>
+    <h2>Формат <span>участия</span></h2>
     <div style="display:flex; flex-wrap:wrap; gap:18px; justify-content:center;">
-        <div style="flex:1 1 200px;max-width:240px;background:#f5fafa;padding:18px;border-radius:12px;">
-            📅 1 месяц<br>4+1 встреч онлайн
+        <div style="flex:1 1 200px;max-width:240px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);padding:20px;border-radius:16px;">
+            📅 6 недель<br>живых занятий
         </div>
-        <div style="flex:1 1 200px;max-width:240px;background:#f5fafa;padding:18px;border-radius:12px;">
+        <div style="flex:1 1 200px;max-width:240px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);padding:20px;border-radius:16px;">
             👥 7–9 человек<br>камерная группа
         </div>
-        <div style="flex:1 1 200px;max-width:240px;background:#f5fafa;padding:18px;border-radius:12px;">
+        <div style="flex:1 1 200px;max-width:240px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);padding:20px;border-radius:16px;">
             🎯 Индивидуальный<br>разбор тет-а-тет
         </div>
-        <div style="flex:1 1 200px;max-width:240px;background:#f5fafa;padding:18px;border-radius:12px;">
+        <div style="flex:1 1 200px;max-width:240px;background:rgba(255,255,255,0.03);border:1px solid rgba(255,255,255,0.08);padding:20px;border-radius:16px;">
             ✅ Домашки<br>и куратор
         </div>
     </div>
 </section>
 
+<hr class="divider">
+
 <!-- === ТАРИФЫ === -->
-<section style="background:#fafdfd;">
-    <h2>Стоимость — инвестиция, которая окупается</h2>
-    <p style="text-align:center; color:#555; margin-bottom: 8px;">Одна найденная точка роста окупает обучение в первый месяц</p>
+<section>
+    <h2>Стоимость — <span>инвестиция</span>, которая окупается</h2>
+    <p style="text-align:center; color: #aaa; margin-bottom: 12px;">Одна найденная точка роста окупает обучение в первый месяц</p>
     <div class="tariffs">
         <div class="tariff-card">
             <div>🧑‍💼 Базовый</div>
@@ -283,14 +421,16 @@
     </div>
 </section>
 
+<hr class="divider">
+
 <!-- === ОБ АВТОРЕ === -->
 <section>
-    <h2>Об авторе</h2>
+    <h2>Об <span>авторе</span></h2>
     <div class="about-block">
         <img class="photo-rect" src="photo1.jpg" alt="Константин">
         <div class="about-text">
             <p><strong>Константин</strong> — 20+ лет в финансах и корпоративном управлении, 15+ лет в консалтинге.</p>
-            <p>Более 700 бизнесов, среди клиентов: РЖД, 585, Большая Медведица, РоссПак и другие.</p>
+            <p style="margin-top:8px;">Более 700 бизнесов, среди клиентов: РЖД, 585, Большая Медведица, РоссПак и другие.</p>
             <div class="numbers-grid">
                 <div class="num-card"><span class="big">300+</span><br>клиентов</div>
                 <div class="num-card"><span class="big">500+ млн ₽</span><br>доп. прибыли</div>
@@ -300,9 +440,11 @@
     </div>
 </section>
 
+<hr class="divider">
+
 <!-- === КЕЙСЫ === -->
-<section style="background:#fafdfd;">
-    <h2>Кейсы из практики</h2>
+<section>
+    <h2>Кейсы <span>из практики</span></h2>
     <div class="cases">
         <ol>
             <li><strong>Сбор вторсырья.</strong> Прибыль ×2 за 5 месяцев без роста объёмов.</li>
@@ -316,12 +458,13 @@
 
 <!-- === FOOTER === -->
 <footer>
-    <h2 style="color:#fff;">Начните находить скрытую прибыль</h2>
-    <p style="opacity:0.85; margin-bottom: 8px;">Первый поток — максимальная включённость автора</p>
-    <a class="btn btn-white" href="https://t.me/Konstantin_finansist" target="_blank">Написать в Telegram</a>
+    <h2>Начните находить <span style="color:#8BC34A;">скрытую прибыль</span></h2>
+    <p style="opacity:0.7; margin-bottom: 10px;">Первый поток — максимальная включённость автора</p>
+    <p style="font-size:14px; opacity:0.6;">Старт 26 мая | Финал 30 июня | 6 недель</p>
+    <a class="btn btn-green" href="https://t.me/Konstantin_finansist" target="_blank">Написать в Telegram</a>
     <br>
-    <a class="btn btn-outline" href="https://max.ru/u/f9LHodD0cOJ-kcw82Nx-7TP04bGN5DIMTp5ciguyJYZIDtn5ia9V79prc-8" target="_blank" style="margin-top: 12px;">Написать в MAX</a>
-    <p style="margin-top:22px; font-size:14px; opacity:0.7;">📞 +7 913 928 79 96</p>
+    <a class="btn btn-outline" href="https://max.ru/u/f9LHodD0cOJ-kcw82Nx-7TP04bGN5DIMTp5ciguyJYZIDtn5ia9V79prc-8" target="_blank" style="margin-top:14px;">Написать в MAX</a>
+    <p style="margin-top:24px; font-size:14px; opacity:0.5;">📞 +7 913 928 79 96</p>
 </footer>
 
 </body>
