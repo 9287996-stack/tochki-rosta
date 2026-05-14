@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ФИНЗНАЕТ — Точки роста прибыли</title>
 
-    <!-- Montserrat -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -52,9 +51,9 @@
             position: absolute;
             top: 0; left: 0;
             width: 100%; height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect x='20' y='20' width='60' height='60' rx='4' fill='none' stroke='%234CAF50' stroke-width='3'/%3E%3Crect x='30' y='30' width='40' height='40' rx='2' fill='%234CAF50' fill-opacity='0.3'/%3E%3Crect x='120' y='20' width='60' height='60' rx='4' fill='none' stroke='%234CAF50' stroke-width='3'/%3E%3Ccircle cx='150' cy='50' r='15' fill='%234CAF50' fill-opacity='0.3'/%3E%3Crect x='20' y='120' width='60' height='60' rx='4' fill='none' stroke='%238BC34A' stroke-width='3'/%3E%3Crect x='30' y='130' width='15' height='15' rx='2' fill='%238BC34A' fill-opacity='0.5'/%3E%3Crect x='55' y='130' width='15' height='15' rx='2' fill='%238BC34A' fill-opacity='0.5'/%3E%3Crect x='30' y='155' width='15' height='15' rx='2' fill='%238BC34A' fill-opacity='0.5'/%3E%3Crect x='120' y='120' width='60' height='60' rx='4' fill='none' stroke='%234CAF50' stroke-width='3'/%3E%3Crect x='130' y='130' width='40' height='15' rx='2' fill='%234CAF50' fill-opacity='0.4'/%3E%3Crect x='130' y='155' width='40' height='15' rx='2' fill='%234CAF50' fill-opacity='0.4'/%3E%3C/svg%3E");
-            background-size: 240px 240px;
-            opacity: 0.08;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Crect x='20' y='20' width='60' height='60' rx='4' fill='none' stroke='%234CAF50' stroke-width='3'/%3E%3Crect x='30' y='30' width='40' height='40' rx='2' fill='%234CAF50' fill-opacity='0.5'/%3E%3Crect x='120' y='20' width='60' height='60' rx='4' fill='none' stroke='%234CAF50' stroke-width='3'/%3E%3Ccircle cx='150' cy='50' r='15' fill='%234CAF50' fill-opacity='0.5'/%3E%3Crect x='20' y='120' width='60' height='60' rx='4' fill='none' stroke='%238BC34A' stroke-width='3'/%3E%3Crect x='30' y='130' width='15' height='15' rx='2' fill='%238BC34A' fill-opacity='0.6'/%3E%3Crect x='55' y='130' width='15' height='15' rx='2' fill='%238BC34A' fill-opacity='0.6'/%3E%3Crect x='30' y='155' width='15' height='15' rx='2' fill='%238BC34A' fill-opacity='0.6'/%3E%3Crect x='120' y='120' width='60' height='60' rx='4' fill='none' stroke='%234CAF50' stroke-width='3'/%3E%3Crect x='130' y='130' width='40' height='15' rx='2' fill='%234CAF50' fill-opacity='0.6'/%3E%3Crect x='130' y='155' width='40' height='15' rx='2' fill='%234CAF50' fill-opacity='0.6'/%3E%3C/svg%3E");
+            background-size: 200px 200px;
+            opacity: 0.18;
             z-index: 0;
         }
         .hero>* { position: relative; z-index: 1; }
@@ -126,15 +125,20 @@
             text-align: center;
         }
         .for-whom .card {
-            flex: 1 1 220px; max-width: 260px;
+            flex: 1 1 220px; max-width: 280px;
             padding: 28px 20px; border-radius: 20px;
             background: rgba(255,255,255,0.03);
             border: 1px solid rgba(255,255,255,0.08);
             font-weight: 600; font-size: 15px;
             transition: 0.25s;
+            line-height: 1.4;
         }
         .for-whom .card:hover { border-color: rgba(76,175,80,0.4); background: rgba(76,175,80,0.05); }
         .for-whom .card .icon { font-size: 32px; margin-bottom: 10px; }
+        .for-whom .card .sub-text {
+            font-size: 12px; color: #8BC34A;
+            font-weight: 500; margin-top: 4px;
+        }
 
         /* Program */
         .week-list {
@@ -156,11 +160,14 @@
         }
         .week-list li span {
             display: block; font-size: 14px; color: #ccc;
-            font-weight: 400; margin-bottom: 6px; line-height: 1.5;
+            font-weight: 400; margin-bottom: 8px; line-height: 1.5;
         }
         .week-list li em {
-            display: block; font-size: 13px; color: #888;
-            font-weight: 400; font-style: normal;
+            display: block; font-size: 14px; color: #fff;
+            font-weight: 600; font-style: normal;
+            background: rgba(76,175,80,0.12);
+            padding: 8px 14px; border-radius: 6px;
+            margin-top: 4px;
         }
 
         /* Schedule */
@@ -179,11 +186,15 @@
         .schedule-card .day {
             font-size: 13px; color: #4CAF50;
             font-weight: 700; text-transform: uppercase;
-            letter-spacing: 1px; margin-bottom: 6px;
+            letter-spacing: 1px; margin-bottom: 8px;
         }
         .schedule-card .desc {
             font-size: 13px; color: #ccc;
-            line-height: 1.5;
+            line-height: 1.7;
+        }
+        .schedule-card .desc span.sep {
+            display: block; color: #666;
+            font-size: 10px; line-height: 1;
         }
 
         /* Tariffs */
@@ -295,7 +306,11 @@
 <section>
     <h2>Для кого это <span>обучение</span></h2>
     <div class="for-whom">
-        <div class="card"><div class="icon">🏢</div>Собственники бизнеса</div>
+        <div class="card">
+            <div class="icon">🏢</div>
+            Собственники бизнеса
+            <div class="sub-text">и директорский / управляющий состав</div>
+        </div>
         <div class="card"><div class="icon">💰</div>Финансисты и экономисты</div>
         <div class="card"><div class="icon">👥</div>Руководители отделов</div>
     </div>
@@ -310,23 +325,36 @@
     <div class="schedule-grid">
         <div class="schedule-card">
             <div class="day">Вт 19:30–22:00</div>
-            <div class="desc">Основное занятие<br>+ домашнее задание</div>
+            <div class="desc">
+                Основное занятие<span class="sep">·</span>
+                домашнее задание
+            </div>
         </div>
         <div class="schedule-card">
             <div class="day">Ср–Пт</div>
-            <div class="desc">Сбор информации<br>вопросы в чат<br>работа с трекерами</div>
+            <div class="desc">
+                Сбор информации<span class="sep">·</span>
+                вопросы в чат<span class="sep">·</span>
+                работа с трекерами
+            </div>
         </div>
         <div class="schedule-card">
             <div class="day">Сб–Вс</div>
-            <div class="desc">Индивидуальные<br>разборы с автором<br>+ комплексное<br>выполнение домашки</div>
+            <div class="desc">
+                Индивидуальные разборы с автором<span class="sep">·</span>
+                комплексное выполнение домашки
+            </div>
         </div>
         <div class="schedule-card">
             <div class="day">Пн</div>
-            <div class="desc">Вход в рабочую<br>неделю</div>
+            <div class="desc">Вход в рабочую неделю</div>
         </div>
         <div class="schedule-card">
             <div class="day">30 июня</div>
-            <div class="desc">Финальное занятие<br>+ завершение курса</div>
+            <div class="desc">
+                Финальное занятие<span class="sep">·</span>
+                до конца недели — завершение курса
+            </div>
         </div>
     </div>
 </section>
@@ -340,32 +368,32 @@
         <li>
             <strong>НЕДЕЛЯ 0 — Вводная</strong>
             <span>Знакомство, цели, проблематизация, дорожная карта роста прибыли. Диагностика бизнеса каждого участника: где теряются деньги, где — точки ближайшего роста.</span>
-            <em>Результат: карта зон роста и чёткий план на месяц.</em>
+            <em>▸ Результат: карта зон роста и чёткий план на месяц.</em>
         </li>
         <li>
             <strong>НЕДЕЛЯ 1 — Финансовая аналитика и юнит-экономика</strong>
             <span>Перестаём считать «в среднем по бизнесу». Смотрим реальную маржинальность каждого продукта, клиента, канала. Настраиваем учёт, который подсвечивает потери.</span>
-            <em>Результат: 3–5 точек быстрого роста прибыли без увеличения оборота.</em>
+            <em>▸ Результат: 3–5 точек быстрого роста прибыли без увеличения оборота.</em>
         </li>
         <li>
             <strong>НЕДЕЛЯ 2 — Продажи, ценообразование, ассортимент</strong>
             <span>Где можно поднять цены без потери клиентов? Какие позиции крадут прибыль? Пересматриваем структуру продаж глазами финансиста.</span>
-            <em>Результат: модель гибкого ценообразования и оптимизированный ассортимент.</em>
+            <em>▸ Результат: модель гибкого ценообразования и оптимизированный ассортимент.</em>
         </li>
         <li>
             <strong>НЕДЕЛЯ 3 — Закупки, логистика, производство</strong>
             <span>Где бизнес физически теряет деньги: переплата поставщикам, «мёртвые» запасы, потери на производстве. Снижаем операционные затраты без потери качества.</span>
-            <em>Результат: план экономии 3–7% на закупках + высвобождение средств из неликвидов.</em>
+            <em>▸ Результат: план экономии 3–7% на закупках + высвобождение средств из неликвидов.</em>
         </li>
         <li>
             <strong>НЕДЕЛЯ 4 — Оборотный капитал и финансовый цикл</strong>
             <span>Почему «прибыль есть, а денег нет»? Управление дебиторкой, кредиторкой, кассовыми разрывами. Инструменты финансирования роста.</span>
-            <em>Результат: модель управления оборотным капиталом. Деньги перестают «исчезать».</em>
+            <em>▸ Результат: модель управления оборотным капиталом. Деньги перестают «исчезать».</em>
         </li>
         <li>
             <strong>ФИНАЛЬНАЯ НЕДЕЛЯ — Итоги</strong>
             <span>Срез результатов за месяц. Нестандартные решения роста прибыли. Каждый участник защищает план действий на 3–6 месяцев вперёд.</span>
-            <em>Результат: итоговый отчёт по точкам роста + дорожная карта.</em>
+            <em>▸ Результат: итоговый отчёт по точкам роста + дорожная карта.</em>
         </li>
     </ul>
 </section>
